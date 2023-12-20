@@ -1,0 +1,54 @@
+.main-content {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.visible {
+    opacity: 1;
+}
+
+#login {
+    animation: enterFromLeft 1.5s ease-in-out forwards;
+}
+
+.content {
+    animation: showUp 2s ease-in-out forwards;
+}
+
+#profile {
+    animation: enterFromLeft 1.5s ease-in-out forwards;
+}
+
+#profile h1 {
+    animation: enterFromLeft 1.5s ease-in-out forwards;
+}
+
+#logo {
+    transition: transform 1.5s ease-in-out;
+}
+
+@keyframes enterFromLeft {
+    from {
+        opacity: 0; 
+        transform: translateX(-100%); 
+    }
+    80% {
+        transform: translateX(+5%);
+    }
+    90% {
+        transform: translateX(-2%);
+    }
+    to {
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+@keyframes showUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;  
+    }
+}

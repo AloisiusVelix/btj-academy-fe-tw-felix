@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link href="/boot-tail/tailwind-personalweb/dist/output.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/4299e696df.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-gray-custom">
+        <div class="bg-black rounded-lg text-white m-10 flex flex-col justify-between">
+            <header class="px-10 py-6 flex flex-col gap-4">    
+                <nav class="flex justify-between items-center">
+                    <div class="flex flex-wrap items-center gap-3">
+                        <img id="logo" src="img/logo-zaga.png" width="40" onclick="rotateImage()">
+                        <p class="text-3xl font-bold text-primary">Welcome<p>
+                    </div>
+                    <button id="toggleButton" type="button" class="md:hidden">
+                        <svg class="w-[30px] h-[30px] text-gray-800 dark:text-primary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                    </button>
+                    <div id="navbar-default" class="hidden md:flex gap-3 text-primary">
+                        <a class="border-2 border-primary p-2 px-6 rounded-lg hover:bg-primary hover:text-white" href="index.html">Home</a>
+                        <a class="border-2 border-primary p-2 px-6 rounded-lg hover:bg-primary hover:text-white" href="about.html">About</a>
+                    </div>
+                </nav>
+                <nav id="navbar" class="md:hidden">
+                    <div class="flex flex-col justify-center gap-3 text-primary text-center">
+                        <a class="border-2 border-primary p-2 px-6 rounded-lg hover:bg-primary hover:text-white" href="index.html">Home</a>
+                        <a class="border-2 border-primary p-2 px-6 rounded-lg hover:bg-primary hover:text-white" href="about.html">About</a>
+                    </div>
+                </nav>
+            </header>
+    
+            <main class="about-page flex flex-col bg-gray-custom">
+                <section id="profile" class="p-10 py-20 flex flex-col gap-10" style="background-image: url('img/bg-zaga.jpg'); background-size: cover; background-position: right;">
+                    <h1 class="text-5xl font-bold text-primary">Aloisius Gonzaga Yovelix Waskita Ardell</h1>
+                    <div class="flex flex-col gap-3">
+                        <p class="mt-5">- Don't Think, Just Do -</p>
+                        <nav class="flex flex-wrap gap-3 text-primary">
+                            <a href="#aboutme" class="border-2 border-primary p-2 px-6 rounded-lg hover:bg-primary hover:text-white">About Me</a>
+                            <a href="#education" class="border-2 border-primary p-2 px-6 rounded-lg hover:bg-primary hover:text-white">Education</a>
+                            <a href="#experience" class="border-2 border-primary p-2 px-6 rounded-lg hover:bg-primary hover:text-white"">Work Experience</a>
+                        </nav>
+                    </div>
+                </section>
+    
+                <section id="aboutme" class="main-content md:flex-row flex flex-col justify-center items-center p-5 py-7 gap-5">
+                    <img src="img/profile-pict.png" class="m-4 rounded-full" alt="foto orang ganteng" width="250vw" style="background-image: url(img/logo-zaga.png); background-size: cover; background-position: center;">
+                    <div>
+                        <article>
+                            <h2 class="mb-5 text-primary text-3xl font-bold">About Me!</h2>
+                            <p>Hi there! I am Velix, an Electrical Engineering graduate with a focus on Information Systems, specifically Software and Web Development. Experienced as a System Analyst,
+                                I am professional, communicative, responsible, result-focused, and reliable. Technical expertise involves software and website development. In addition, interests in photography,
+                                videography, graphic design, and UI/UX design. Ready to actively contribute to the professional world of work.</p>
+                        </article>
+                        <div class="mt-5 flex flex-col gap-2">
+                            <p class="text-primary m-0 md:text-start text-center">Connect with me:</p>
+                            <div class="flex md:justify-start justify-center gap-3">
+                                <a class="fa-brands fa-instagram text-3xl" href="https://www.instagram.com/aloisius_velix/"></a>
+                                <a class="fa-brands fa-whatsapp text-3xl" href="https://www.linkedin.com/in/aloisius-velix/"></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="education" class="main-content bg-black p-10 gap-7">
+                    <h2 class="mb-10 text-primary text-center text-3xl font-bold">Education</h2>
+                    <section class="flex gap-7 md:flex-row flex-col-reverse justify-center items-center">
+                        <div class="bg-gray-custom text-light rounded-lg max-w-md">
+                            <img class="rounded-t-lg" src="img/smansa.png" alt="">
+                            <div class="flex flex-col justify-between p-7">
+                                <h5 class="mb-3 text-2xl font-bold">SMA Negeri 1 Ungaran</h5>
+                                <p class="mb-3">Menimba ilmu di bangku Sekolah Menengah Atas dengan jurusan IPA selama 3 tahun di SMA Negeri 1 Ungaran.</p>
+                                <a class="text-primary" href="https://www.sman1-ungaran.sch.id/">
+                                    Overview
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-gray-custom text-light rounded-lg max-w-md">
+                            <img class="rounded-t-lg" src="img/undip.png" alt="">
+                            <div class="flex flex-col justify-between p-7">
+                                <h5 class="card-title mb-3 text-2xl font-bold">Universitas Diponegoro</h5>
+                                <p class="mb-3">Memperdalam ilmu dalam bidang Sistem Informasi di Universitas Diponegoro Jurusan Teknik Elektro, lulus dengan predikat cumlaude.</p>
+                                <a class="text-primary" href="https://www.undip.ac.id/">
+                                    Overview
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+    
+                <section id="experience" class="main-content bg-black p-10 text-center">
+                    <h2 class="mb-10 text-primary text-center text-3xl font-bold">Work Experience</h2>
+                    <div class="flex md:flex-row flex-col-reverse gap-7 justify-center items-center">
+                        <div class="border rounded p-5 max-w-md w-full">
+                            <h3 class="text-primary font-semibold text-xl">CV. Redesma</h3>
+                            <div class="mt-3">
+                                <p class="italic text-lg">Electrical Engineer Part Timer</p>
+                                <p>Juni 2021 - Februari 2022</p>
+                            </div>
+                        </div>
+                        <div class="border rounded p-5 max-w-md w-full">
+                            <h3 class="text-primary font-semibold text-xl">PT. Javan Cipta Solusi</h3>
+                            <div class="mt-3">
+                                <p class="italic text-lg">System Analyst Internship</p>
+                                <p>Februari 2022 - Juni 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+    
+            <footer class="text-center p-6">
+                &copy; 2023 BTJ Academy
+            </footer>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

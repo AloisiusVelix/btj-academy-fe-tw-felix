@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link href="/boot-tail/tailwind-personalweb/dist/output.css" rel="stylesheet">
+    </head>
+    <body class="bg-gray-custom">
+        <div class="bg-black rounded-lg text-white m-10 flex flex-col justify-between">
+            <header class="px-10 py-6 flex flex-col gap-4">    
+                <nav class="flex justify-between items-center">
+                    <div class="flex flex-wrap items-center gap-3">
+                        <img id="logo" src="img/logo-zaga.png" width="40" onclick="rotateImage()">
+                        <p class="text-3xl font-bold text-primary">Welcome<p>
+                    </div>
+                    <button id="toggleButton" type="button" class="md:hidden">
+                        <svg class="w-[30px] h-[30px] text-gray-800 dark:text-primary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                        </svg>
+                    </button>
+                    <div id="navbar-default" class="hidden md:flex gap-3 text-primary">
+                        <a class="border-2 border-primary p-2 px-6 rounded-lg hover:bg-primary hover:text-white" href="index.html">Home</a>
+                        <a class="border-2 border-primary p-2 px-6 rounded-lg hover:bg-primary hover:text-white" href="about.html">About</a>
+                    </div>
+                </nav>
+                <nav id="navbar" class="md:hidden">
+                    <div class="flex flex-col justify-center gap-3 text-primary text-center">
+                        <a class="border-2 border-primary p-2 px-6 rounded-lg hover:bg-primary hover:text-white" href="index.html">Home</a>
+                        <a class="border-2 border-primary p-2 px-6 rounded-lg hover:bg-primary hover:text-white" href="about.html">About</a>
+                    </div>
+                </nav>
+            </header>
+    
+            <main class="flex flex-col lg:flex-row justify-between items-center p-10">
+                <section id="login" class="bg-gray-custom rounded-lg text-light p-12">
+                    <div id="head-form" class="mb-4">
+                        <p class="text-3xl font-bold">Welcome to Our Landing Page<p>
+                        <p>Please login to access other features.</p>
+                    </div>
+                    <form id="login-form" class="flex flex-col gap-3">
+                        <div class="username flex flex-col gap-2">
+                            <label for="username" class="text-primary">Username : </label>
+                            <input type="text" id="username" class="form-input rounded-lg text-black" placeholder="Enter your username" oninput="validateUsername()">
+                            <div class="max-w-sm flex flex-wrap">
+                                <span id="errorUsername" class="text-rose-600 flex flex-wrap"></span>
+                            </div>
+                        </div>
+    
+                        <div class="password flex flex-col gap-2">
+                            <label for="pass" class="text-primary">Password : </label>
+                            <input type="password" id="pass" class="form-input rounded-lg text-black" placeholder="Enter your password" oninput="validatePass()">
+                            <div class="max-w-sm flex flex-wrap">
+                                <span id="errorPassword" class="text-rose-600"></span>
+                            </div>
+                            <div class="message text-primary">
+                                <span id="capslock-allert"></span>
+                            </div>
+                        </div>
+    
+                        <div class="showPass flex gap-2 items-center mb-3">
+                            <input type="checkbox" id="showPassword" class="rounded text-primary">
+                            <label for="showPassword">Show Password</label>
+                        </div>
+                        <button type="submit" class="bg-primary p-2 rounded-lg shadow-md font-bold">Login</button>
+                    </form>
+                </section>
+    
+                <section class="content text-center">
+                    <figure>
+                        <img src="img/logo-zaga.png" class="my-5" width="300vw">
+                    </figure>
+        
+                    <article class="quotes">
+                        <p>"Don't Think, Just Do." - 7th era</p>
+                    </article>
+                </section>
+            </main>
+
+            <footer class="text-center p-6">
+                &copy; 2023 BTJ Academy
+            </footer>
+        </div>        
+
+        <script src="script.js"></script>
+    </body>
+</html>
